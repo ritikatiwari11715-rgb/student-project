@@ -1,40 +1,67 @@
-print("STUDENT PERFORMANCE ANALYZER")
+# Student Performance Analyzer
 
-name = input("Enter student name: ")
+A command-line Student Performance Analyzer developed as a Python Essentials course project.
 
-maths = float(input("Enter maths marks: "))
-science = float(input("Enter science marks: "))
-english = float(input("Enter English marks: "))
+## Overview
 
-print("\nStudent Name:", name)
-print("Maths:", maths)
-print("Science:", science)
-print("English:", english)
+The Student Performance Analyzer is a simple Python application that accepts a student's marks in Mathematics, Science, and English and calculates the total marks, average, percentage, grade, and final result.
 
-total = maths + science + english
-average = total / 3
-percentage = (total / 300) * 100
+## Problem Statement
 
-print("\nTotal Marks:", total)
-print("Average:", average)
-print("Percentage:", percentage)
+Students need a simple way to calculate and understand their academic performance. Manual calculation of total marks, average, percentage, and grade can take time and may lead to calculation errors.
 
-if percentage >= 90:
-    grade = "A+"
-elif percentage >= 80:
-    grade = "A"
-elif percentage >= 70:
-    grade = "B"
-elif percentage >= 60:
-    grade = "C"
-elif percentage >= 50:
-    grade = "D"
-else:
-    grade = "F"
+This project provides a basic command-line solution for performing these calculations automatically.
 
-print("Grade:", grade)
+## Objectives
 
-if maths >= 35 and science >= 35 and english >= 35:
-    print("Result: PASS")
-else:
-    print("Result: FAIL")
+- Accept student details and subject marks.
+- Calculate total marks.
+- Calculate average marks.
+- Calculate percentage.
+- Assign a grade based on percentage.
+- Determine whether the student has passed or failed.
+- Apply basic Python programming concepts.
+
+## Technologies Used
+
+- Python 3
+- Command Line Interface
+
+## Features
+
+- Student name input
+- Marks input for three subjects
+- Total marks calculation
+- Average calculation
+- Percentage calculation
+- Grade calculation
+- PASS/FAIL result
+
+## How It Works
+
+1. The user enters the student's name.
+2. The user enters marks for Mathematics, Science, and English.
+3. The program calculates the total marks.
+4. The program calculates the average and percentage.
+5. The program assigns a grade.
+6. The program checks the minimum passing marks in each subject.
+7. The final result is displayed.
+
+## Python Concepts Used
+
+- Variables
+- Data types
+- Input and output
+- Arithmetic operators
+- Conditional statements
+- `if`, `elif`, and `else`
+- User input using `input()`
+- Type conversion using `float()`
+
+## Project Structure
+
+```text
+student-project/
+│
+├── README.md
+└── student_expense_tracker.py
