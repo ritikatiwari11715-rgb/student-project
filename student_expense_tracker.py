@@ -1,115 +1,39 @@
-expenses = []
+print("STUDENT PERFORMANCE ANALYZER")
 
+name = input("enter student name:")
+maths = float(input("enter maths marks:"))
+science = float(input("enter science marks:"))
+english = float(input("enter english marks:"))
 
-def add_expense():
-    try:
-        amount = float(input("Enter expense amount: "))
-        category = input("Enter category: ").strip()
-        description = input("Enter description: ").strip()
+print("\nstudent name:", name)
+print("maths:", maths)
+print("science:", science)
+print("english:", english)
 
-        if amount <= 0:
-            print("Amount must be greater than 0.")
-            return
+total = maths + science + english
+average = total / 3
+percentage = (total / 300) * 100
 
-        if not category:
-            print("Category cannot be empty.")
-            return
+print("\ntotal marks:", total)
+print("average:", average)
+print("percentage:", percentage)
 
-        expense = {
-            "amount": amount,
-            "category": category,
-            "description": description
-        }
+if percentage >= 90:
+    grade = "A+"
+elif percentage >= 80:
+    grade = "A"
+elif percentage >= 70:
+    grade = "B"
+elif percentage >= 60:
+    grade = "C"
+elif percentage >= 50:
+    grade = "D"
+else:
+    grade = "F"
 
-        expenses.append(expense)
-        print("Expense added successfully.")
+print("grade:", grade)
 
-    except ValueError:
-        print("Please enter a valid amount.")
-
-
-def view_expenses():
-    if not expenses:
-        print("No expenses recorded.")
-        return
-
-    print("\n--- All Expenses ---")
-
-    for i, expense in enumerate(expenses, start=1):
-        print(
-            f"{i}. ₹{expense['amount']:.2f} | "
-            f"{expense['category']} | "
-            f"{expense['description']}"
-        )
-
-
-def search_expenses():
-    category = input("Enter category to search: ").strip().lower()
-
-    found = False
-
-    for expense in expenses:
-        if expense["category"].lower() == category:
-            print(
-                f"₹{expense['amount']:.2f} | "
-                f"{expense['category']} | "
-                f"{expense['description']}"
-            )
-            found = True
-
-    if not found:
-        print("No expenses found for this category.")
-
-
-def show_summary():
-    if not expenses:
-        print("No expenses recorded.")
-        return
-
-    total = sum(expense["amount"] for expense in expenses)
-
-    print(f"\nTotal Expenses: ₹{total:.2f}")
-    print(f"Number of Expenses: {len(expenses)}")
-
-    category_totals = {}
-
-    for expense in expenses:
-        category = expense["category"]
-        category_totals[category] = (
-            category_totals.get(category, 0) + expense["amount"]
-        )
-
-    print("\nCategory-wise Spending:")
-
-    for category, amount in category_totals.items():
-        print(f"{category}: ₹{amount:.2f}")
-
-
-def main():
-    while True:
-        print("\n===== Student Expense Tracker =====")
-        print("1. Add Expense")
-        print("2. View Expenses")
-        print("3. Search Expenses")
-        print("4. Show Summary")
-        print("5. Exit")
-
-        choice = input("Enter your choice: ")
-
-        if choice == "1":
-            add_expense()
-        elif choice == "2":
-            view_expenses()
-        elif choice == "3":
-            search_expenses()
-        elif choice == "4":
-            show_summary()
-        elif choice == "5":
-            print("Thank you for using Student Expense Tracker.")
-            break
-        else:
-            print("Invalid choice. Please try again.")
-
-
-if __name__ == "__main__":
-    main()
+if maths >= 35 and science >= 35 and english >= 35:
+    print("result: PASS")
+else:
+    print("result: FAIL")
