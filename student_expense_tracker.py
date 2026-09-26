@@ -1,10 +1,8 @@
 print("STUDENT PERFORMANCE ANALYZER")
-
 name = input("Enter student name: ")
 maths = float(input("Enter maths marks: "))
 science = float(input("Enter science marks: "))
 english = float(input("Enter English marks: "))
-
 print("\nStudent Name:", name)
 print("Maths:", maths)
 print("Science:", science)
