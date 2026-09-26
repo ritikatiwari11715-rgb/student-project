@@ -1,18 +1,24 @@
 print("STUDENT PERFORMANCE ANALYZER")
-name = input("enter student name:")
-maths = float(input("enter maths marks:"))
-science = float(input("enter science marks:"))
-english = float(input("enter english marks:"))
-print("\n student name:", name)
-print("maths:",maths)
-print("science:",science)
-print("english:",english)
-total = maths + science + english 
-average = total/3
-percentage = (total/300)* 100
-print(" \n total marks:", total)
-print("average:" , average)
-print("percentage:", percentage)
+
+name = input("Enter student name: ")
+
+maths = float(input("Enter maths marks: "))
+science = float(input("Enter science marks: "))
+english = float(input("Enter English marks: "))
+
+print("\nStudent Name:", name)
+print("Maths:", maths)
+print("Science:", science)
+print("English:", english)
+
+total = maths + science + english
+average = total / 3
+percentage = (total / 300) * 100
+
+print("\nTotal Marks:", total)
+print("Average:", average)
+print("Percentage:", percentage)
+
 if percentage >= 90:
     grade = "A+"
 elif percentage >= 80:
@@ -25,8 +31,11 @@ elif percentage >= 50:
     grade = "D"
 else:
     grade = "F"
-print ("grade:",grade)
-if maths >= 35 and science >= 35 and english >= 35: 
-    print(" result: PASS")
+
+print("Grade:", grade)
+
+if maths >= 35 and science >= 35 and english >= 35:
+    print("Result: PASS")
 else:
-    print("result: FAIL")
+    print("Result: FAIL")
+    
