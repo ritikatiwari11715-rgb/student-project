@@ -1,7 +1,6 @@
 print("STUDENT PERFORMANCE ANALYZER")
 
 name = input("Enter student name: ")
-
 maths = float(input("Enter maths marks: "))
 science = float(input("Enter science marks: "))
 english = float(input("Enter English marks: "))
@@ -38,4 +37,3 @@ if maths >= 35 and science >= 35 and english >= 35:
     print("Result: PASS")
 else:
     print("Result: FAIL")
-    
